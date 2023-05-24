@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/url-hashing', function () {
+    return view('urlshort');
+});
+
+Route::post('/covertUrl', 'App\Http\Controllers\UrlShortnerController@ShortUrl');
